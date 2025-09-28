@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "pnpm hardhat test",
-    "deploy:holesky":"pnpm hardhat ignition deploy --network holesky ignition/modules/Counter.ts --verify"
+    "deployCounter:holesky": "pnpm hardhat ignition deploy --network holesky ignition/modules/Counter.ts --verify --reset",
+    "deployMyERC20:holesky": "pnpm hardhat ignition deploy --network holesky ignition/modules/MyERC20.ts --verify --reset"
   },
   "keywords": [],
   "author": "",
@@ -25,5 +26,8 @@
     "hardhat": "^3.0.6",
     "mocha": "^11.7.2",
     "typescript": "~5.8.3"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.4.0"
   }
 }
