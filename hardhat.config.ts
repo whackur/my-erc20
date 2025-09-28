@@ -34,11 +34,15 @@ const config: HardhatUserConfig = {
       type: "http",
       chainType: "l1",
       url: configVariable("HOLESKY_RPC_URL"),
-      // accounts: [configVariable("HOLESKY_PRIVATE_KEY")],
       accounts: {
         mnemonic: configVariable("HOLESKY_PRIVATE_KEY")
       }
     }
+  },
+  verify: {
+    etherscan: {
+      apiKey: configVariable("HOLESKY_API_KEY")
+    },
   },
 };
 
