@@ -6,7 +6,8 @@
   "scripts": {
     "test": "pnpm hardhat test",
     "deployCounter:holesky": "pnpm hardhat ignition deploy --network holesky ignition/modules/Counter.ts --verify --reset",
-    "deployMyERC20:holesky": "pnpm hardhat ignition deploy --network holesky ignition/modules/MyERC20.ts --verify --reset"
+    "deployMyERC20:holesky": "pnpm hardhat ignition deploy --network holesky ignition/modules/MyERC20.ts --verify --reset",
+    "deploySimpleWallet:holesky": "pnpm hardhat ignition deploy --network holesky ignition/modules/SimpleWallet.ts --verify --reset"
   },
   "keywords": [],
   "author": "",
