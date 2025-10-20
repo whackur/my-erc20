@@ -28,7 +28,10 @@ describe("Counter", function () {
     // check that the aggregated events match the current value
     let total = 0n;
     for (const event of events) {
-      total += event.args.by;
+      const eventLog = event as unknown as { args: { by: bigint } };
+      if (eventLog.args) {
+        total += eventLog.args.by;
+      }
     }
 
     expect(await counter.x()).to.equal(total);
