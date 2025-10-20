@@ -5,23 +5,20 @@
   "main": "index.js",
   "scripts": {
     "test": "pnpm hardhat test",
-    "deployCounter:holesky": "pnpm hardhat ignition deploy --network holesky ignition/modules/Counter.ts --verify --reset",
-    "deployMyERC20:holesky": "pnpm hardhat ignition deploy --network holesky ignition/modules/MyERC20.ts --verify --reset",
-    "deploySimpleWallet:holesky": "pnpm hardhat ignition deploy --network holesky ignition/modules/SimpleWallet.ts --verify --reset",
     "lint": "eslint .",
     "format": "prettier --write .",
-    "lint:all": "pnpm format && pnpm lint"
+    "lint:all": "pnpm format && pnpm lint",
+    "run:checkCode": "npx hardhat run scripts/check-code.ts",
+    "deployCounter:holesky": "pnpm hardhat ignition deploy --network holesky ignition/modules/Counter.ts --verify --reset",
+    "deployMyERC20:holesky": "pnpm hardhat ignition deploy --network holesky ignition/modules/MyERC20.ts --verify --reset",
+    "deploySimpleWallet:holesky": "pnpm hardhat ignition deploy --network holesky ignition/modules/SimpleWallet.ts --verify --reset"
   },
-  "keywords": [],
-  "author": "",
   "license": "MIT",
   "packageManager": "pnpm@10.17.1",
   "type": "module",
-  "dependencies": {
-    "@nomicfoundation/hardhat-ethers": "^4.0.2",
-    "@openzeppelin/contracts": "^5.4.0"
-  },
   "devDependencies": {
+    "@nomicfoundation/hardhat-ethers": "^4.0.2",
+    "@openzeppelin/contracts": "^5.4.0",
     "@eslint/js": "^9.38.0",
     "@nomicfoundation/hardhat-ignition": "^3.0.3",
     "@nomicfoundation/hardhat-ignition-ethers": "^3.0.3",
