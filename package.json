@@ -7,30 +7,41 @@
     "test": "pnpm hardhat test",
     "deployCounter:holesky": "pnpm hardhat ignition deploy --network holesky ignition/modules/Counter.ts --verify --reset",
     "deployMyERC20:holesky": "pnpm hardhat ignition deploy --network holesky ignition/modules/MyERC20.ts --verify --reset",
-    "deploySimpleWallet:holesky": "pnpm hardhat ignition deploy --network holesky ignition/modules/SimpleWallet.ts --verify --reset"
+    "deploySimpleWallet:holesky": "pnpm hardhat ignition deploy --network holesky ignition/modules/SimpleWallet.ts --verify --reset",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "lint:all": "pnpm format && pnpm lint"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "packageManager": "pnpm@10.17.1",
   "type": "module",
+  "dependencies": {
+    "@nomicfoundation/hardhat-ethers": "^4.0.2",
+    "@openzeppelin/contracts": "^5.4.0"
+  },
   "devDependencies": {
+    "@eslint/js": "^9.38.0",
     "@nomicfoundation/hardhat-ignition": "^3.0.3",
     "@nomicfoundation/hardhat-ignition-ethers": "^3.0.3",
     "@nomicfoundation/hardhat-toolbox-mocha-ethers": "^3.0.0",
     "@types/chai": "^4.3.20",
     "@types/chai-as-promised": "^8.0.2",
     "@types/mocha": "^10.0.10",
-    "@types/node": "^22.18.6",
+    "@types/node": "^24.8.1",
+    "@typescript-eslint/eslint-plugin": "^8.46.1",
+    "@typescript-eslint/parser": "^8.46.1",
     "chai": "^5.3.3",
+    "eslint": "^9.38.0",
+    "eslint-config-prettier": "^10.1.8",
     "ethers": "^6.15.0",
     "forge-std": "github:foundry-rs/forge-std#v1.9.4",
-    "hardhat": "^3.0.6",
-    "mocha": "^11.7.2",
-    "typescript": "~5.8.3"
-  },
-  "dependencies": {
-    "@nomicfoundation/hardhat-ethers": "^4.0.2",
-    "@openzeppelin/contracts": "^5.4.0"
+    "globals": "^16.4.0",
+    "hardhat": "^3.0.7",
+    "mocha": "^11.7.4",
+    "prettier": "^3.6.2",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.46.1"
   }
 }

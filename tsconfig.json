@@ -10,9 +10,5 @@
     "moduleResolution": "nodenext",
     "outDir": "dist"
   },
-  "include": [
-    "hardhat.config.ts",
-    "scripts/**/*.ts",
-    "test/**/*.ts"
-  ]
+  "include": ["hardhat.config.ts", "scripts/**/*.ts", "test/**/*.ts"]
 }

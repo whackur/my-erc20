@@ -1,9 +1,9 @@
-import { buildModule } from "@nomicfoundation/hardhat-ignition/modules";
+import {buildModule} from '@nomicfoundation/hardhat-ignition/modules';
 
-const SimpleWalletModule = buildModule("SimpleWalletModule", (m) => {
-  const simpleWallet = m.contract("SimpleWallet");
+const SimpleWalletModule = buildModule('SimpleWalletModule', (m) => {
+  const simpleWallet = m.contract('SimpleWallet');
 
-  return { simpleWallet };
+  return {simpleWallet};
 });
 
 export default SimpleWalletModule;
